@@ -16,7 +16,7 @@ export async function getTrending() {
 }
 
 export async function checkSecurity(tokenId: string) {
-  return twRequest("/v1/security/assets", "assets=" + tokenId)
+  return twRequest("/v1/validate", "address=" + tokenId + "&type=address")
 }
 
 export async function searchAsset(query: string) {
